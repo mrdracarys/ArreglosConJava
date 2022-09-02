@@ -40,10 +40,11 @@ public class Ventanagg extends javax.swing.JFrame {
         Ordenar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new java.awt.GridLayout());
+        getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
         jPanel1.setLayout(new java.awt.GridLayout(0, 1));
 
+        Resultado.setBackground(new java.awt.Color(204, 255, 204));
         Resultado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ResultadoActionPerformed(evt);
@@ -55,12 +56,25 @@ public class Ventanagg extends javax.swing.JFrame {
             }
         });
         jPanel1.add(Resultado);
+
+        Resultado2.setBackground(new java.awt.Color(204, 255, 204));
+        Resultado2.setOpaque(true);
         jPanel1.add(Resultado2);
 
+        jPanel2.setBackground(new java.awt.Color(204, 255, 204));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Opciones"));
-        jPanel2.setLayout(new java.awt.GridLayout());
+        jPanel2.setLayout(new java.awt.GridLayout(1, 0));
 
+        jButton1.setBackground(new java.awt.Color(153, 255, 255));
         jButton1.setText("Agregar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton1MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton1MouseExited(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -68,7 +82,16 @@ public class Ventanagg extends javax.swing.JFrame {
         });
         jPanel2.add(jButton1);
 
+        jButton2.setBackground(new java.awt.Color(204, 204, 255));
         jButton2.setText("Eventos");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jButton2MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jButton2MouseExited(evt);
+            }
+        });
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -76,7 +99,16 @@ public class Ventanagg extends javax.swing.JFrame {
         });
         jPanel2.add(jButton2);
 
+        Ordenar.setBackground(new java.awt.Color(153, 255, 255));
         Ordenar.setText("Ordenar");
+        Ordenar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                OrdenarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                OrdenarMouseExited(evt);
+            }
+        });
         Ordenar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 OrdenarActionPerformed(evt);
@@ -119,6 +151,7 @@ public class Ventanagg extends javax.swing.JFrame {
             // mensage = mensage + numeros[i] +" | ";
             Resultado2.setText(Resultado.getText() + num[i] + "");
         }
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -137,6 +170,36 @@ public class Ventanagg extends javax.swing.JFrame {
            evt.consume();
        }
     }//GEN-LAST:event_ResultadoKeyTyped
+
+    private void jButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseEntered
+        // TODO add your handling code here:
+        jButton2.setBackground(new java.awt.Color(153, 255, 255)); 
+    }//GEN-LAST:event_jButton2MouseEntered
+
+    private void jButton2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseExited
+        // TODO add your handling code here:
+        jButton2.setBackground(new java.awt.Color(204, 204, 255));
+    }//GEN-LAST:event_jButton2MouseExited
+
+    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
+        // TODO add your handling code here:
+        jButton1.setBackground(new java.awt.Color(204, 204, 255));
+    }//GEN-LAST:event_jButton1MouseEntered
+
+    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
+        // TODO add your handling code here:
+        jButton1.setBackground(new java.awt.Color(153, 255, 255));
+    }//GEN-LAST:event_jButton1MouseExited
+
+    private void OrdenarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OrdenarMouseEntered
+        // TODO add your handling code here:
+        Ordenar.setBackground(new java.awt.Color(204, 204, 255));
+    }//GEN-LAST:event_OrdenarMouseEntered
+
+    private void OrdenarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OrdenarMouseExited
+        // TODO add your handling code here:
+        Ordenar.setBackground(new java.awt.Color(153, 255, 255));
+    }//GEN-LAST:event_OrdenarMouseExited
 
     /**
      * @param args the command line arguments
